@@ -53,8 +53,8 @@ def create_pdf(fields, table_data, signature_img=None):
     # Fill text fields (adjust coordinates as needed)
     can.drawString(x_name, y_name, f"{reversing_chars(fields['full_name'])}")
     can.drawString(x_name-230, y_name, f"{fields['dob']}")
-    can.drawString(x_name, y_name - 28, f"{fields['height']}")
-    can.drawString(x_name-230, y_name - 28, f"{fields['weight']}")
+    can.drawString(x_name, y_name - 28, f"{fields['weight']}")
+    can.drawString(x_name-230, y_name - 28, f"{fields['height']}")
     
 
     ros_counter = 0
