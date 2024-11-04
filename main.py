@@ -399,7 +399,7 @@ with st.form(key='table_form', clear_on_submit=False):
     else:
         check = False
         
-with st.form(key='table_form', clear_on_submit=False):
+with st.form(key='table_form1', clear_on_submit=False):
     table_data = []
     st.write("ציין האם יש בתוך/על גופך את הפרטים הבאים:")
     
