@@ -407,7 +407,7 @@ with st.form(key='table_form1', clear_on_submit=False):
         row = {
             'question_obj': question,
             'answer': st.radio(question, options=['כן', 'לא', 'לא יודע/ת'], key=f"answer_{i}"),
-            'details': st.text_input("אם כן / לא יודע/ת הוסיפו פרטים + תאריך של האירוע", max_chars=48, key=f"details_lab_{i}"),
+            'details': st.text_input("אם כן / לא יודע/ת הוסיפו פרטים + תאריך של האירוע", max_chars=48, key=f"details_lab_{i}!"),
         }
         st.divider()  # Optional divider to visually separate each question
         table_data.append(row)
