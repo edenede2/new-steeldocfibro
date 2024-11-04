@@ -1,0 +1,6 @@
+streamlit
+PyPDF2
+reportlab
+streamlit-drawable-canvas
+Pillow
+streamlit_pdf_viewer
