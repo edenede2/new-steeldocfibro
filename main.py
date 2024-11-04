@@ -399,19 +399,20 @@ with st.form(key='table_form', clear_on_submit=False):
     else:
         check = False
         
-if st.session_state.signed:
-    pdf_stream = create_pdf(fields,(st.session_state.table_data), signature_img=(st.session_state.signature_img))
-    binarystream = pdf_stream.getvalue()
-    pdf_viewer(input=binarystream, height=800)
-
-    accept = st.checkbox("אני החתום מטה מצהיר שהמידע בטופס נכון ומדוייק.")
-
-    if accept:
-        if st.button("שלח טופס"):
-            send_email(binarystream, fields['full_name'], fields["Id_num"], fields["address"], fields["dob"])
-            st.success("הטופס נשלח בהצלחה")
-    else:
-        st.write("אנא אשר את ההצהרה")
+with st.form(key='table_form', clear_on_submit=False):
+    table_data = []
+    st.write("ציין האם יש בתוך/על גופך את הפרטים הבאים:")
+    
+    for i, question in enumerate(questions_list):
+        row = {
+            'question_obj': question,
+            'answer': st.radio(question, options=['כן', 'לא', 'לא יודע/ת'], key=f"answer_{i}"),
+            'details': st.text_input("אם כן / לא יודע/ת הוסיפו פרטים + תאריך של האירוע", max_chars=48, key=f"details_lab_{i}"),
+        }
+        st.divider()  # Optional divider to visually separate each question
+        table_data.append(row)
+    
+    submit_button = st.form_submit_button("שמור")
 
 
 else:
