@@ -1,7 +1,7 @@
 streamlit
-# PyPDF2==3.0.1
-# reportlab
-# streamlit-drawable-canvas==0.9.2
+PyPDF2
+reportlab
+# streamlit-drawable-canvas
 Pillow
 # streamlit_pdf_viewer==0.0.2
 
