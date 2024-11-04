@@ -415,9 +415,6 @@ with st.form(key='table_form', clear_on_submit=False):
     submit_button = st.form_submit_button("שמור")
 
 
-else:
-    st.write("אנא אשר את ההצהרה")
-        
 
 
 
