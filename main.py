@@ -409,6 +409,13 @@ if st.session_state.signed:
     accept = st.checkbox("אני החתום מטה מצהיר שהמידע בטופס נכון ומדוייק.")
 
     if accept:
+        # Add button to download the PDF
+        st.download_button(
+            label="הורד את הטופס",
+            data=binarystream,
+            file_name=f"form_{fields['full_name']}.pdf",
+            mime="application/pdf"
+        )
         if st.button("שלח טופס"):
             send_email(binarystream, fields['full_name'], fields["Id_num"], fields["address"], fields["dob"])
             st.success("הטופס נשלח בהצלחה")
