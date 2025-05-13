@@ -242,8 +242,11 @@ def signature(canvas_result):
 
 
 def send_email(pdf_data, full_name, id, address, dob):
-    sender_email = 'edenstream988@gmail.com'  # Replace with your sender email
-    sender_password = 'aiyh ffqj hgps rwan'  # Replace with your email password or app-specific password
+    sender_email = st.secrets.get("SENDER_EMAIL_ADDRESS", "")
+    sender_password = st.secrets.get("SENDER_EMAIL_PASSWORD", "")
+
+    # sender_email = 'edenstream988@gmail.com'  # Replace with your sender email
+    # sender_password = 'aiyh ffqj hgps rwan'  # Replace with your email password or app-specific password
 
     msg_cont =f"""
 
