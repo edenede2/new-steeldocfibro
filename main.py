@@ -20,7 +20,7 @@ from email.message import EmailMessage
 # Paths (updated)
 # --------------------------
 OLD_PDF_PATH = '/mnt/data/doc.pdf'
-NEW_PDF_PATH = '/mnt/data/טופס מתכות מחקר 250825.pdf'
+NEW_PDF_PATH = 'טופס מתכות מחקר 250825.pdf'
 FONT_PATH = "OpenSans-VariableFont_wdth,wght.ttf"  # עדכן אם צריך
 
 # רישום פונט (פעם אחת)
