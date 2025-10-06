@@ -362,11 +362,11 @@ if 'table_data' not in st.session_state:
 
 with st.form(key='table_form', clear_on_submit=False):
     table_data = []
-    st.write("""ציין האם יש בתוך/על גופך את הפרטים הבאים:""", key='table_label')
+    st.write("""ציין האם יש בתוך/על גופך את הפרטים הבאים:""")
     for i in range(len(questions_list)):
+        st.write(questions_list[i])
+        st.write("סמנו את המתאים")
         row = {
-            'question_obj': st.write(questions_list[i]),
-            'question': st.write(f"סמנו את המתאים", key=f"question_labels_{i}"), 
             'answer': st.radio("", options=['כן', 'לא', 'לא יודע/ת'], key=f"answer_{i}"),
             'details': st.text_input("אם כן / לא יודע/ת הוסיפו פרטים + תאריך של האירוע",max_chars= 48,key=f"details_lab_{i}"),
         }
